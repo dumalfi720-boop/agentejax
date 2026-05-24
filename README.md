@@ -4,65 +4,63 @@
 
 # Agentejax
 
-> Curso prático em PT-BR para você construir do zero seu próprio agente de IA pessoal — em TypeScript, rodando 24/7 no Telegram, com memória, ferramentas e autonomia. Sem framework fechado, sem lock-in, com cada linha sendo sua.
+> Practical course in PT-BR for you to build your own personal AI agent from scratch — in TypeScript, running 24/7 on Telegram, with memory, tools and autonomy. No closed framework, no lock-in, with each line being yours.
 
-**[Acessar o curso →](https://inematds.github.io/agentejax/)**
-
----
-
-## O que é
-
-Um curso interativo no formato INEMA.CLUB, dividido em **3 trilhas / 9 módulos / 54 tópicos**, com:
-
-- 🌱 **Trilha 1 · Fundamentos** — do zero até o agente respondendo no Telegram com memória e ferramentas.
-- ⚡ **Trilha 2 · Vida do Agente** — comunicação 24/7, streaming, voz, autonomia, reflexão e skills auto-geradas.
-- 🛡 **Trilha 3 · Produção** — MCP, aprovações, defesa contra prompt injection, custos, dashboard, hospedagem e testes.
-
-Além das páginas do curso, a landing page tem um **picker interativo** onde você marca as features que quer e baixa um arquivo `.md` com seu blueprint personalizado — pronto pra colar numa IA e pedir o build.
+**[Access the course →](https://inematds.github.io/agentejax/)**
 
 ---
 
-## Por que não usar Hermes ou OpenClaw direto?
+## What is it
 
-Existem ótimos frameworks de agente prontos. Comparação honesta entre os dois mais populares e a abordagem deste curso:
+An interactive course in the duclub format, divided into **3 tracks / 9 modules / 54 topics**, with:
 
-| Aspecto | Hermes | OpenClaw | **Agentejax (este curso)** |
+- 🌱 **Track 1 · Fundamentals** — from scratch to the agent responding on Telegram with memory and tools.
+- ⚡ **Track 2 · Agent's Life** — 24/7 communication, streaming, voice, autonomy, reflection and self-generated skills.
+- 🛡 **Track 3 · Production** — MCP, approvals, defense against prompt injection, costs, dashboard, hosting and testing.
+
+In addition to the course pages, the landing page has an **interactive picker** where you mark the features you want and download a file`.md`with your personalized blueprint — ready to paste into an AI and request the build.
+
+---
+
+## Why not use Hermes or OpenClaw directly?
+
+There are great ready-made agent frameworks. Honest comparison between the two most popular and the approach of this course:
+
+| Appearance | Hermes | OpenClaw | **Agentejax (this course)** |
 |---|---|---|---|
-| Linguagem | Python | TypeScript | TypeScript |
-| Modelo de uso | Você instala e usa | Você instala e usa | Você **aprende e constrói** |
-| Curva inicial | Baixa | Baixa | Média (3 trilhas) |
-| Quem entende o código | Time deles | Time deles | **Você** |
-| Customização profunda | Fork e mantém | Fork e mantém | Direto no seu repo |
-| Memória multi-camada | Sim (4 camadas) | Sim | Sim (3 camadas, T1 M1.2) |
-| Skills auto-geradas | Sim (nativo) | Sim (registry) | Opcional (T2 M2.3) |
-| Voz | Sim | Sim (mobile) | Opcional (T2 M2.2) |
-| Canais de mensagem | 15+ | 22+ | Telegram (extensível) |
-| Multi-agente | Limitado | Sim | Out-of-scope (você adiciona) |
-| Cliente mobile nativo | Não | Sim | Telegram já é mobile |
-| Aprovações de ações | Trust levels | Por comando | Por comando (T3 M3.1) |
-| Lock-in | Roadmap deles | Roadmap deles | **Zero** |
+| Language | Python | TypeScript | TypeScript |
+| Usage model | You install and use | You install and use | You **learn and build** |
+| Initial curve | Low | Low | Average (3 tracks) |
+| Who understands the code | Their team | Their team | **You** |
+| Deep customization | Fork and maintain | Fork and maintain | Direct to your repo |
+| Multi-layer memory | Yes (4 layers) | Yes | Yes (3 layers, T1 M1.2) |
+| Self-generated skills | Yes (native) | Yes (registry) | Optional (T2 M2.3) |
+| Voice | Yes | Yes (mobile) | Optional (T2 M2.2) |
+| Message channels | 15+ | 22+ | Telegram (extensible) |
+| Multi-agent | Limited | Yes | Out-of-scope (you add) |
+| Native mobile client | No | Yes | Telegram is now mobile |
+| Action approvals | Trust levels | By command | By command (T3 M3.1) |
+| Lock-in | Their roadmap | Their roadmap | **Zero** |
 | License | MIT | MIT | MIT |
-| Quando faz mais sentido | Quero rodar hoje | Quero ecossistema com loja | **Quero entender e ser dono** |
+| When it makes more sense | I want to run today | I want an ecosystem with a store | **I want to understand and own it** |
 
-### Use o Agentejax se
+### Use Agentejax if
 
-- Você quer **entender cada linha** que roda no seu agente
-- Vai depender desse agente em tarefas críticas
-- Quer trocar de modelo (Claude / GPT / DeepSeek / Ollama) sem dor
-- Quer adicionar ferramentas próprias (CRM, banco, ERP) sem mexer em código de terceiros
+- You want to **understand every line** that runs on your agent
+- You will depend on this agent in critical tasks
+- Want to change models (Claude / GPT / DeepSeek / Ollama) without pain
+- Want to add your own tools (CRM, bank, ERP) without touching third-party code
 
-### Use um pronto se
+### Use a ready-made one if
 
-- Você só quer testar a ideia em 1 hora
-- Não quer manter código TypeScript no longo prazo
-- Precisa de integrações de mobile nativo prontas
-- Não tem interesse em entender como agentes funcionam por dentro
+- You just want to test the idea in 1 hour
+- Don't want to maintain TypeScript code in the long term
+- Need ready-made native mobile integrations
+- Not interested in understanding how agents work from the inside
 
 ---
 
-## Estrutura do repositório
-
-```
+## Repository structure```
 agentejax/
 ├── index.html                # Landing page com picker e tabela comparativa
 ├── curso/
@@ -73,17 +71,13 @@ agentejax/
 │       └── modulo-1-3.html   # Cérebro e Ferramentas
 ├── README.md
 └── LICENSE
-```
-
-Trilhas 2 e 3 chegam nas próximas iterações.
+```Tracks 2 and 3 arrive in the next iterations.
 
 ---
 
-## Rodar localmente
+## Run locally
 
-Site totalmente estático, sem build. Basta abrir o `index.html` no navegador, ou servir com qualquer servidor HTTP:
-
-```bash
+Fully static website, no build. Just open the`index.html`in the browser, or serve with any HTTP server:```bash
 # Python (vem instalado em quase tudo)
 python3 -m http.server 8000
 
@@ -91,30 +85,24 @@ python3 -m http.server 8000
 npx serve .
 
 # Depois abre http://localhost:8000
-```
+```---
 
----
-
-## Publicação no GitHub Pages
+## Publishing to GitHub Pages
 
 1. Settings → Pages
-2. Source: `Deploy from a branch`
-3. Branch: `main` / pasta: `/ (root)`
-4. Salvar — em ~1 min o site fica em `https://inematds.github.io/agentejax/`
+2.Source:`Deploy from a branch`3.Branch:`main`/ folder:`/ (root)`4. Save — in ~1 min the site is up`https://inematds.github.io/agentejax/`---
 
----
+##Roadmap
 
-## Roadmap
-
-- [x] Trilha 1 · Fundamentos (3 módulos completos)
-- [x] Landing com picker interativo + download de blueprint
-- [x] Tabela comparativa Hermes × OpenClaw × Agentejax
-- [ ] Trilha 2 · Vida do Agente
-- [ ] Trilha 3 · Produção
-- [ ] Repositório de código de referência (TypeScript) com cada módulo implementado
+- [x] Track 1 · Fundamentals (3 complete modules)
+- [x] Landing with interactive picker + blueprint download
+- [x] Comparison table Hermes × OpenClaw × Agentejax
+- [ ] Track 2 · Agent's Life
+- [ ] Track 3 · Production
+- [ ] Reference code repository (TypeScript) with each implemented module
 
 ---
 
 ## License
 
-MIT — faça o que quiser. Bifurca, copia, vende, adapta.
+MIT — do what you want. Fork, copy, sell, adapt.
