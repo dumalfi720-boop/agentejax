@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+html
+<html class="dark" lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agentejax | Construa Seu Agente de IA Pessoal</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Agentejax | Build Your Personal AI Agent</title>
+<script data-notranslate="True" src="https://cdn.tailwindcss.com"></script>
+<script data-notranslate="True">
     tailwind.config = {
       darkMode: 'class',
       theme: {
@@ -18,8 +18,8 @@
       }
     }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-notranslate="True">
     body { font-family: 'Inter', sans-serif; }
     .dark body { background-color: #111827; }
 
@@ -97,324 +97,307 @@
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-
-  <!-- NAVIGATION -->
-  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-14">
-        <div class="flex items-center space-x-4">
-          <a href="index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">🤖</span>
-            <span class="font-bold text-lg hidden sm:inline">Agentejax</span>
-          </a>
-          <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
-        </div>
-        <div class="flex items-center space-x-1 sm:space-x-2">
-          <a href="curso/trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors">
-            <span class="sm:hidden">T1</span>
-            <span class="hidden sm:inline">Fundamentos</span>
-          </a>
-          <a href="#trilha2" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors">
-            <span class="sm:hidden">T2</span>
-            <span class="hidden sm:inline">Vida do Agente</span>
-          </a>
-          <a href="#trilha3" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors">
-            <span class="sm:hidden">T3</span>
-            <span class="hidden sm:inline">Produção</span>
-          </a>
-          <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-            </svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- HERO IMAGE -->
-  <div class="bg-dark-900 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-      <img src="assets/agentejax-hero.webp" alt="AgenteJAX" class="w-full rounded-xl shadow-2xl" loading="eager" fetchpriority="high">
-    </div>
-  </div>
-
-  <!-- HERO -->
-  <header class="bg-gradient-to-br from-dark-800 via-dark-800 to-dark-900 py-16 border-b border-dark-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <span class="inline-block px-3 py-1 bg-primary/20 text-primary text-xs font-semibold rounded-full mb-6">CURSO PRÁTICO · MIT · 100% SEU CÓDIGO</span>
-      <h1 class="text-4xl sm:text-5xl font-bold mb-6 leading-tight">Construa seu agente de IA pessoal<br><span class="text-primary">de ponta a ponta</span></h1>
-      <p class="text-lg text-neutral-300 max-w-3xl mx-auto mb-10">Um assistente que mora no seu Telegram, lembra de você, age sozinho 24/7 e usa as ferramentas que você escolher. Em TypeScript. Sem framework fechado. Você é dono de cada linha.</p>
-
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto mb-10">
-        <div class="bg-dark-800/50 rounded-lg p-4 border border-dark-600">
-          <div class="text-2xl font-bold text-primary">3</div>
-          <div class="text-xs text-neutral-400 mt-1">Trilhas</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-4 border border-dark-600">
-          <div class="text-2xl font-bold text-primary">9</div>
-          <div class="text-xs text-neutral-400 mt-1">Módulos</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-4 border border-dark-600">
-          <div class="text-2xl font-bold text-primary">54</div>
-          <div class="text-xs text-neutral-400 mt-1">Tópicos</div>
-        </div>
-        <div class="bg-dark-800/50 rounded-lg p-4 border border-dark-600">
-          <div class="text-2xl font-bold text-primary">~6h</div>
-          <div class="text-xs text-neutral-400 mt-1">Duração</div>
-        </div>
-      </div>
-
-      <div class="flex flex-col sm:flex-row justify-start sm:justify-center gap-3">
-        <a href="curso/trilha1/index.html" class="px-6 py-3 bg-primary text-dark-900 rounded-lg font-bold hover:bg-yellow-300 transition-colors">Começar pela Trilha 1 →</a>
-        <a href="#blueprint" class="px-6 py-3 bg-dark-700 text-neutral-100 rounded-lg font-semibold hover:bg-dark-600 transition-colors">Montar meu Blueprint</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- POR QUE CONSTRUIR O SEU? -->
-  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold mb-4">Por que construir o seu, em vez de usar pronto?</h2>
-      <p class="text-neutral-400 max-w-2xl mx-auto">Existem ótimos frameworks de agente prontos. Mas todos têm um teto. Aqui é a comparação honesta entre os dois mais conhecidos e a abordagem deste curso.</p>
-    </div>
-
-    <div class="overflow-x-auto rounded-xl border border-dark-600">
-      <table class="w-full text-sm">
-        <thead class="bg-dark-800">
-          <tr>
-            <th class="text-left p-4 font-semibold text-neutral-300">Aspecto</th>
-            <th class="text-left p-4 font-semibold text-neutral-300">Hermes</th>
-            <th class="text-left p-4 font-semibold text-neutral-300">OpenClaw</th>
-            <th class="text-left p-4 font-semibold text-primary">Agentejax (este curso)</th>
-          </tr>
-        </thead>
-        <tbody class="divide-y divide-dark-600">
-          <tr class="bg-dark-900/50">
-            <td class="p-4 font-medium">Linguagem</td>
-            <td class="p-4 text-neutral-400">Python</td>
-            <td class="p-4 text-neutral-400">TypeScript</td>
-            <td class="p-4 text-neutral-300">TypeScript</td>
-          </tr>
-          <tr>
-            <td class="p-4 font-medium">Modelo de uso</td>
-            <td class="p-4 text-neutral-400">Você instala e usa</td>
-            <td class="p-4 text-neutral-400">Você instala e usa</td>
-            <td class="p-4 text-neutral-300">Você <strong class="text-primary">aprende e constrói</strong></td>
-          </tr>
-          <tr class="bg-dark-900/50">
-            <td class="p-4 font-medium">Curva inicial</td>
-            <td class="p-4 text-neutral-400">Baixa (clone, configura)</td>
-            <td class="p-4 text-neutral-400">Baixa (clone, configura)</td>
-            <td class="p-4 text-neutral-300">Média (segue 3 trilhas)</td>
-          </tr>
-          <tr>
-            <td class="p-4 font-medium">Quem entende o código</td>
-            <td class="p-4 text-neutral-400">O time deles</td>
-            <td class="p-4 text-neutral-400">O time deles</td>
-            <td class="p-4 text-neutral-300"><strong class="text-emerald-400">Você</strong></td>
-          </tr>
-          <tr class="bg-dark-900/50">
-            <td class="p-4 font-medium">Customização profunda</td>
-            <td class="p-4 text-neutral-400">Fork e mantém</td>
-            <td class="p-4 text-neutral-400">Fork e mantém</td>
-            <td class="p-4 text-neutral-300">Direto no seu repo</td>
-          </tr>
-          <tr>
-            <td class="p-4 font-medium">Memória multi-camada</td>
-            <td class="p-4 text-emerald-400">Sim (4 camadas)</td>
-            <td class="p-4 text-emerald-400">Sim</td>
-            <td class="p-4 text-emerald-400">Sim (3 camadas, T1 M1.2)</td>
-          </tr>
-          <tr class="bg-dark-900/50">
-            <td class="p-4 font-medium">Skills auto-geradas</td>
-            <td class="p-4 text-emerald-400">Sim (nativo)</td>
-            <td class="p-4 text-emerald-400">Sim (registry público)</td>
-            <td class="p-4 text-emerald-400">Opcional (T2 M2.3)</td>
-          </tr>
-          <tr>
-            <td class="p-4 font-medium">Voz</td>
-            <td class="p-4 text-emerald-400">Sim</td>
-            <td class="p-4 text-emerald-400">Sim (mobile nativo)</td>
-            <td class="p-4 text-emerald-400">Opcional (T2 M2.2)</td>
-          </tr>
-          <tr class="bg-dark-900/50">
-            <td class="p-4 font-medium">Canais de mensagem</td>
-            <td class="p-4 text-neutral-300">15+</td>
-            <td class="p-4 text-neutral-300">22+</td>
-            <td class="p-4 text-neutral-300">Telegram (extensível)</td>
-          </tr>
-          <tr>
-            <td class="p-4 font-medium">Multi-agente</td>
-            <td class="p-4 text-neutral-400">Limitado</td>
-            <td class="p-4 text-emerald-400">Sim</td>
-            <td class="p-4 text-neutral-400">Out-of-scope (você adiciona)</td>
-          </tr>
-          <tr class="bg-dark-900/50">
-            <td class="p-4 font-medium">Cliente mobile nativo</td>
-            <td class="p-4 text-red-400">Não</td>
-            <td class="p-4 text-emerald-400">Sim</td>
-            <td class="p-4 text-neutral-400">Telegram já é mobile</td>
-          </tr>
-          <tr>
-            <td class="p-4 font-medium">Aprovações de ações</td>
-            <td class="p-4 text-neutral-400">Trust levels</td>
-            <td class="p-4 text-emerald-400">Por comando</td>
-            <td class="p-4 text-emerald-400">Por comando (T3 M3.1)</td>
-          </tr>
-          <tr class="bg-dark-900/50">
-            <td class="p-4 font-medium">Lock-in</td>
-            <td class="p-4 text-neutral-400">Roadmap deles</td>
-            <td class="p-4 text-neutral-400">Roadmap deles</td>
-            <td class="p-4 text-emerald-400">Zero</td>
-          </tr>
-          <tr>
-            <td class="p-4 font-medium">License</td>
-            <td class="p-4 text-neutral-300">MIT</td>
-            <td class="p-4 text-neutral-300">MIT</td>
-            <td class="p-4 text-neutral-300">MIT</td>
-          </tr>
-          <tr class="bg-dark-900/50">
-            <td class="p-4 font-medium">Quando faz mais sentido</td>
-            <td class="p-4 text-neutral-400">Quero rodar hoje, sem mexer</td>
-            <td class="p-4 text-neutral-400">Quero ecossistema com loja de skills</td>
-            <td class="p-4 text-neutral-300"><strong class="text-primary">Quero entender e ser dono</strong></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-      <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
-        <h4 class="font-bold text-emerald-400 mb-3">✓ Construa o seu se</h4>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Você quer entender cada linha que roda</span></li>
-          <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Vai depender desse agente em tarefas críticas</span></li>
-          <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Quer trocar de modelo (Claude / GPT / DeepSeek / Ollama) sem dor</span></li>
-          <li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Quer adicionar ferramentas próprias (CRM, banco, ERP)</span></li>
-        </ul>
-      </div>
-      <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-        <h4 class="font-bold text-red-400 mb-3">✗ Use um pronto se</h4>
-        <ul class="space-y-2 text-neutral-300 text-sm">
-          <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Você só quer testar a ideia em 1 hora</span></li>
-          <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Não quer manter código TypeScript no longo prazo</span></li>
-          <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Precisa de integrações de mobile nativo prontas</span></li>
-          <li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Não tem interesse em entender como agentes funcionam por dentro</span></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- AS 3 TRILHAS -->
-  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-dark-600">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold mb-4">As 3 trilhas do curso</h2>
-      <p class="text-neutral-400 max-w-2xl mx-auto">Cada trilha tem 3 módulos com 6 tópicos. Pode seguir do início ou pular pra parte que te interessa — cada módulo se sustenta sozinho.</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <a href="curso/trilha1/index.html" id="trilha1" class="group bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 hover:bg-emerald-500/10 transition-colors">
-        <span class="inline-block px-2 py-0.5 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-3">TRILHA 1</span>
-        <h3 class="text-2xl font-bold mb-2 group-hover:text-emerald-400 transition-colors">🌱 Fundamentos</h3>
-        <p class="text-neutral-400 text-sm mb-4">Do zero até o agente respondendo: ambiente, identidade, memória, ferramentas e o loop principal.</p>
-        <div class="flex items-center justify-between text-xs text-neutral-500">
-          <span>3 módulos · 18 tópicos</span>
-          <span class="text-emerald-400 font-semibold">Começar →</span>
-        </div>
-      </a>
-      <a href="#" id="trilha2" class="group bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 hover:bg-blue-500/10 transition-colors">
-        <span class="inline-block px-2 py-0.5 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-3">TRILHA 2</span>
-        <h3 class="text-2xl font-bold mb-2 group-hover:text-blue-400 transition-colors">⚡ Vida do Agente</h3>
-        <p class="text-neutral-400 text-sm mb-4">Comunicação 24/7 no Telegram, streaming, voz, autonomia, reflexão e skills que ele cria sozinho.</p>
-        <div class="flex items-center justify-between text-xs text-neutral-500">
-          <span>3 módulos · 18 tópicos</span>
-          <span class="text-blue-400 font-semibold">Em breve</span>
-        </div>
-      </a>
-      <a href="#" id="trilha3" class="group bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 hover:bg-purple-500/10 transition-colors">
-        <span class="inline-block px-2 py-0.5 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-3">TRILHA 3</span>
-        <h3 class="text-2xl font-bold mb-2 group-hover:text-purple-400 transition-colors">🛡 Produção</h3>
-        <p class="text-neutral-400 text-sm mb-4">MCP, aprovações, defesa contra prompt injection, custos, dashboard, hospedagem 24/7 e testes.</p>
-        <div class="flex items-center justify-between text-xs text-neutral-500">
-          <span>3 módulos · 18 tópicos</span>
-          <span class="text-purple-400 font-semibold">Em breve</span>
-        </div>
-      </a>
-    </div>
-  </section>
-
-  <!-- BLUEPRINT PICKER -->
-  <section id="blueprint" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-dark-600">
-    <div class="text-center mb-12">
-      <span class="inline-block px-3 py-1 bg-primary/20 text-primary text-xs font-semibold rounded-full mb-4">FERRAMENTA INTERATIVA</span>
-      <h2 class="text-3xl font-bold mb-4">Monte seu blueprint</h2>
-      <p class="text-neutral-400 max-w-2xl mx-auto">Marque as features que quer no seu agente e baixe um arquivo .md com seu plano de build personalizado. Os 6 itens marcados como núcleo são obrigatórios — o resto é decisão sua.</p>
-    </div>
-
-    <!-- Controles -->
-    <div class="flex flex-wrap items-center gap-3 mb-6 p-4 bg-dark-800 rounded-xl border border-dark-600">
-      <button onclick="selectAll()" class="px-4 py-2 text-sm bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors">Selecionar tudo</button>
-      <button onclick="clearAll()" class="px-4 py-2 text-sm bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors">Limpar opcionais</button>
-      <button onclick="recommended()" class="px-4 py-2 text-sm bg-primary/20 text-primary hover:bg-primary/30 rounded-lg transition-colors font-semibold">⭐ Perfil recomendado</button>
-      <input type="search" id="picker-search" placeholder="Buscar feature..." class="flex-1 min-w-[180px] px-4 py-2 text-sm bg-dark-700 border border-dark-600 rounded-lg focus:outline-none focus:border-primary">
-    </div>
-
-    <!-- Grid de cards -->
-    <div id="picker-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6"></div>
-
-    <!-- Barra de download -->
-    <div class="sticky bottom-4 bg-dark-800 border border-primary/40 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-2xl">
-      <div class="text-sm">
-        <span id="picker-counter" class="font-bold text-primary">0</span>
-        <span class="text-neutral-400">features selecionadas no seu blueprint</span>
-      </div>
-      <div class="flex flex-wrap gap-2">
-        <button onclick="downloadBlueprint()" class="px-5 py-2 bg-primary text-dark-900 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">⬇ Baixar .md</button>
-        <button onclick="copyPrompt()" class="px-5 py-2 bg-dark-700 hover:bg-dark-600 rounded-lg font-semibold transition-colors">📋 Copiar prompt</button>
-      </div>
-    </div>
-    <p class="text-xs text-neutral-500 mt-3 text-center">O prompt é pra você colar numa IA (Claude, ChatGPT) e pedir pra ela construir só o que você marcou.</p>
-  </section>
-
-  <!-- COMO FUNCIONA -->
-  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-dark-600">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold mb-4">Como o curso é organizado</h2>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
-        <div class="w-12 h-12 rounded-full bg-primary/20 text-primary font-bold text-xl flex items-center justify-center mb-4">1</div>
-        <h3 class="text-lg font-semibold mb-2">Cada tópico tem 3 seções</h3>
-        <p class="text-neutral-400 text-sm">O que é, por que aprender, e os conceitos-chave. Você pega o essencial sem precisar ler tudo.</p>
-      </div>
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
-        <div class="w-12 h-12 rounded-full bg-primary/20 text-primary font-bold text-xl flex items-center justify-center mb-4">2</div>
-        <h3 class="text-lg font-semibold mb-2">Modal ou página completa</h3>
-        <p class="text-neutral-400 text-sm">Cada módulo abre num modal pra leitura rápida ou em página dedicada com casos práticos e código.</p>
-      </div>
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
-        <div class="w-12 h-12 rounded-full bg-primary/20 text-primary font-bold text-xl flex items-center justify-center mb-4">3</div>
-        <h3 class="text-lg font-semibold mb-2">Light e dark mode</h3>
-        <p class="text-neutral-400 text-sm">Lê de noite no escuro, lê de dia no claro. Tudo otimizado pra leitura longa.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="border-t border-dark-600 py-8 mt-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-      <p>Agentejax · MIT License · 2026</p>
-      <p class="mt-1"><a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a></p>
-    </div>
-  </footer>
-
-  <!-- SCRIPTS -->
-  <script>
+NAVIGATION
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="index.html">
+<span class="text-2xl">🤖</span>
+<span class="font-bold text-lg hidden sm:inline">Agentejax</span>
+</a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://duclub" target="_blank">duclub</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="curso/trilha1/index.html">
+<span class="sm:hidden">T1</span>
+<span class="hidden sm:inline">Fundamentals</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="#trilha2">
+<span class="sm:hidden">T2</span>
+<span class="hidden sm:inline">Agent's Life</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="#trilha3">
+<span class="sm:hidden">T3</span>
+<span class="hidden sm:inline">Production</span>
+</a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20">
+<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+</svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+HERO IMAGE
+<div class="bg-dark-900 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+<img alt="AgenteJAX" class="w-full rounded-xl shadow-2xl" fetchpriority="high" loading="eager" src="assets/agentejax-hero.webp"/>
+</div>
+</div>
+HERO
+<header class="bg-gradient-to-br from-dark-800 via-dark-800 to-dark-900 py-16 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<span class="inline-block px-3 py-1 bg-primary/20 text-primary text-xs font-semibold rounded-full mb-6">PRACTICAL COURSE · MIT · 100% YOUR CODE</span>
+<h1 class="text-4xl sm:text-5xl font-bold mb-6 leading-tight">Build your personal AI agent<br/><span class="text-primary">from end to end</span></h1>
+<p class="text-lg text-neutral-300 max-w-3xl mx-auto mb-10">An assistant that lives in your Telegram, remembers you, acts alone 24/7 and uses the tools you choose. In TypeScript. No closed framework. You own each line.</p>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto mb-10">
+<div class="bg-dark-800/50 rounded-lg p-4 border border-dark-600">
+<div class="text-2xl font-bold text-primary">3</div>
+<div class="text-xs text-neutral-400 mt-1">Trails</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 border border-dark-600">
+<div class="text-2xl font-bold text-primary">9</div>
+<div class="text-xs text-neutral-400 mt-1">Modules</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 border border-dark-600">
+<div class="text-2xl font-bold text-primary">54</div>
+<div class="text-xs text-neutral-400 mt-1">Topics</div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 border border-dark-600">
+<div class="text-2xl font-bold text-primary">~6h</div>
+<div class="text-xs text-neutral-400 mt-1">Duration</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row justify-start sm:justify-center gap-3">
+<a class="px-6 py-3 bg-primary text-dark-900 rounded-lg font-bold hover:bg-yellow-300 transition-colors" href="curso/trilha1/index.html">Start with Track 1 →</a>
+<a class="px-6 py-3 bg-dark-700 text-neutral-100 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="#blueprint">Build my Blueprint</a>
+</div>
+</div>
+</header>
+WHY BUILD YOURS?
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold mb-4">Why build your own instead of using ready-made?</h2>
+<p class="text-neutral-400 max-w-2xl mx-auto">There are great ready-made agent frameworks. But everyone has a ceiling. Here is the honest comparison between the two best known and the approach of this course.</p>
+</div>
+<div class="overflow-x-auto rounded-xl border border-dark-600">
+<table class="w-full text-sm">
+<thead class="bg-dark-800">
+<tr>
+<th class="text-left p-4 font-semibold text-neutral-300">Aspect</th>
+<th class="text-left p-4 font-semibold text-neutral-300">Hermes</th>
+<th class="text-left p-4 font-semibold text-neutral-300">OpenClaw</th>
+<th class="text-left p-4 font-semibold text-primary">Agentejax (this course)</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-dark-600">
+<tr class="bg-dark-900/50">
+<td class="p-4 font-medium">Language</td>
+<td class="p-4 text-neutral-400">Python</td>
+<td class="p-4 text-neutral-400">TypeScript</td>
+<td class="p-4 text-neutral-300">TypeScript</td>
+</tr>
+<tr>
+<td class="p-4 font-medium">Usage model</td>
+<td class="p-4 text-neutral-400">You install and use</td>
+<td class="p-4 text-neutral-400">You install and use</td>
+<td class="p-4 text-neutral-300">You<strong class="text-primary">learn and build</strong></td>
+</tr>
+<tr class="bg-dark-900/50">
+<td class="p-4 font-medium">Initial curve</td>
+<td class="p-4 text-neutral-400">Download (clone, configure)</td>
+<td class="p-4 text-neutral-400">Download (clone, configure)</td>
+<td class="p-4 text-neutral-300">Average (follows 3 trails)</td>
+</tr>
+<tr>
+<td class="p-4 font-medium">Who understands the code</td>
+<td class="p-4 text-neutral-400">Their team</td>
+<td class="p-4 text-neutral-400">Their team</td>
+<td class="p-4 text-neutral-300"><strong class="text-emerald-400">You</strong></td>
+</tr>
+<tr class="bg-dark-900/50">
+<td class="p-4 font-medium">Deep customization</td>
+<td class="p-4 text-neutral-400">Fork and keep</td>
+<td class="p-4 text-neutral-400">Fork and keep</td>
+<td class="p-4 text-neutral-300">Direct to your repo</td>
+</tr>
+<tr>
+<td class="p-4 font-medium">Multi-layer memory</td>
+<td class="p-4 text-emerald-400">Yes (4 layers)</td>
+<td class="p-4 text-emerald-400">Yes</td>
+<td class="p-4 text-emerald-400">Yes (3 layers, T1 M1.2)</td>
+</tr>
+<tr class="bg-dark-900/50">
+<td class="p-4 font-medium">Auto-generated skills</td>
+<td class="p-4 text-emerald-400">Yes (native)</td>
+<td class="p-4 text-emerald-400">Yes (public registry)</td>
+<td class="p-4 text-emerald-400">Optional (T2 M2.3)</td>
+</tr>
+<tr>
+<td class="p-4 font-medium">Voice</td>
+<td class="p-4 text-emerald-400">Yes</td>
+<td class="p-4 text-emerald-400">Yes (native mobile)</td>
+<td class="p-4 text-emerald-400">Optional (T2 M2.2)</td>
+</tr>
+<tr class="bg-dark-900/50">
+<td class="p-4 font-medium">Message channels</td>
+<td class="p-4 text-neutral-300">15+</td>
+<td class="p-4 text-neutral-300">22+</td>
+<td class="p-4 text-neutral-300">Telegram (extensible)</td>
+</tr>
+<tr>
+<td class="p-4 font-medium">Multi-agent</td>
+<td class="p-4 text-neutral-400">Limited</td>
+<td class="p-4 text-emerald-400">Yes</td>
+<td class="p-4 text-neutral-400">Out-of-scope (you add)</td>
+</tr>
+<tr class="bg-dark-900/50">
+<td class="p-4 font-medium">Native mobile client</td>
+<td class="p-4 text-red-400">No</td>
+<td class="p-4 text-emerald-400">Yes</td>
+<td class="p-4 text-neutral-400">Telegram is now mobile</td>
+</tr>
+<tr>
+<td class="p-4 font-medium">Action approvals</td>
+<td class="p-4 text-neutral-400">Trust levels</td>
+<td class="p-4 text-emerald-400">By command</td>
+<td class="p-4 text-emerald-400">By command (T3 M3.1)</td>
+</tr>
+<tr class="bg-dark-900/50">
+<td class="p-4 font-medium">Lock-in</td>
+<td class="p-4 text-neutral-400">Their roadmap</td>
+<td class="p-4 text-neutral-400">Their roadmap</td>
+<td class="p-4 text-emerald-400">Zero</td>
+</tr>
+<tr>
+<td class="p-4 font-medium">License</td>
+<td class="p-4 text-neutral-300">MIT</td>
+<td class="p-4 text-neutral-300">MIT</td>
+<td class="p-4 text-neutral-300">MIT</td>
+</tr>
+<tr class="bg-dark-900/50">
+<td class="p-4 font-medium">When it makes more sense</td>
+<td class="p-4 text-neutral-400">I want to run today, without moving</td>
+<td class="p-4 text-neutral-400">I want an ecosystem with a skills store</td>
+<td class="p-4 text-neutral-300"><strong class="text-primary">I want to understand and own</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
+<h4 class="font-bold text-emerald-400 mb-3">✓ Build your own</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>You want to understand every line that runs</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>You will depend on this agent in critical tasks</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Want to change models (Claude / GPT / DeepSeek / Ollama) without pain</span></li>
+<li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Do you want to add your own tools (CRM, bank, ERP)</span></li>
+</ul>
+</div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
+<h4 class="font-bold text-red-400 mb-3">✗ Use a ready-made</h4>
+<ul class="space-y-2 text-neutral-300 text-sm">
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>You just want to test the idea in 1 hour</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Don't want to maintain TypeScript code long term</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Need ready-made native mobile integrations</span></li>
+<li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Not interested in understanding how agents work from the inside</span></li>
+</ul>
+</div>
+</div>
+</section>
+THE 3 TRAILS
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-dark-600">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold mb-4">The 3 trails of the course</h2>
+<p class="text-neutral-400 max-w-2xl mx-auto">Each track has 3 modules with 6 topics. You can continue from the beginning or skip to the part that interests you — each module stands on its own.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<a class="group bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 hover:bg-emerald-500/10 transition-colors" href="curso/trilha1/index.html" id="trilha1">
+<span class="inline-block px-2 py-0.5 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-3">TRACK 1</span>
+<h3 class="text-2xl font-bold mb-2 group-hover:text-emerald-400 transition-colors">🌱 Fundamentals</h3>
+<p class="text-neutral-400 text-sm mb-4">From zero to the responding agent: environment, identity, memory, tools and the main loop.</p>
+<div class="flex items-center justify-between text-xs text-neutral-500">
+<span>3 modules · 18 topics</span>
+<span class="text-emerald-400 font-semibold">Get started →</span>
+</div>
+</a>
+<a class="group bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 hover:bg-blue-500/10 transition-colors" href="#" id="trilha2">
+<span class="inline-block px-2 py-0.5 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-3">TRACK 2</span>
+<h3 class="text-2xl font-bold mb-2 group-hover:text-blue-400 transition-colors">⚡ Agent Life</h3>
+<p class="text-neutral-400 text-sm mb-4">24/7 communication on Telegram, streaming, voice, autonomy, reflection and skills that he creates alone.</p>
+<div class="flex items-center justify-between text-xs text-neutral-500">
+<span>3 modules · 18 topics</span>
+<span class="text-blue-400 font-semibold">Shortly</span>
+</div>
+</a>
+<a class="group bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 hover:bg-purple-500/10 transition-colors" href="#" id="trilha3">
+<span class="inline-block px-2 py-0.5 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-3">TRACK 3</span>
+<h3 class="text-2xl font-bold mb-2 group-hover:text-purple-400 transition-colors">🛡 Production</h3>
+<p class="text-neutral-400 text-sm mb-4">MCP, approvals, defense against prompt injection, costs, dashboard, 24/7 hosting and testing.</p>
+<div class="flex items-center justify-between text-xs text-neutral-500">
+<span>3 modules · 18 topics</span>
+<span class="text-purple-400 font-semibold">Shortly</span>
+</div>
+</a>
+</div>
+</section>
+BLUEPRINT PICKER
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-dark-600" id="blueprint">
+<div class="text-center mb-12">
+<span class="inline-block px-3 py-1 bg-primary/20 text-primary text-xs font-semibold rounded-full mb-4">INTERACTIVE TOOL</span>
+<h2 class="text-3xl font-bold mb-4">Build your blueprint</h2>
+<p class="text-neutral-400 max-w-2xl mx-auto">Select the features you want in your agent and download a .md file with your personalized build plan. The 6 items marked as core are mandatory — the rest is your decision.</p>
+</div>
+Controls
+<div class="flex flex-wrap items-center gap-3 mb-6 p-4 bg-dark-800 rounded-xl border border-dark-600">
+<button class="px-4 py-2 text-sm bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors" onclick="selectAll()">Select all</button>
+<button class="px-4 py-2 text-sm bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors" onclick="clearAll()">Clear options</button>
+<button class="px-4 py-2 text-sm bg-primary/20 text-primary hover:bg-primary/30 rounded-lg transition-colors font-semibold" onclick="recommended()">⭐ Recommended profile</button>
+<input class="flex-1 min-w-[180px] px-4 py-2 text-sm bg-dark-700 border border-dark-600 rounded-lg focus:outline-none focus:border-primary" id="picker-search" placeholder="Buscar feature..." type="search"/>
+</div>
+Card grid
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6" id="picker-grid"></div>
+Download bar
+<div class="sticky bottom-4 bg-dark-800 border border-primary/40 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-2xl">
+<div class="text-sm">
+<span class="font-bold text-primary" id="picker-counter">0</span>
+<span class="text-neutral-400">features selected in your blueprint</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<button class="px-5 py-2 bg-primary text-dark-900 rounded-lg font-semibold hover:bg-yellow-300 transition-colors" onclick="downloadBlueprint()">⬇ Download .md</button>
+<button class="px-5 py-2 bg-dark-700 hover:bg-dark-600 rounded-lg font-semibold transition-colors" onclick="copyPrompt()">📋 Copy prompt</button>
+</div>
+</div>
+<p class="text-xs text-neutral-500 mt-3 text-center">The prompt is for you to paste it into an AI (Claude, ChatGPT) and ask it to build only what you marked.</p>
+</section>
+HOW IT WORKS
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-dark-600">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold mb-4">How the course is organized</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+<div class="w-12 h-12 rounded-full bg-primary/20 text-primary font-bold text-xl flex items-center justify-center mb-4">1</div>
+<h3 class="text-lg font-semibold mb-2">Each topic has 3 sections</h3>
+<p class="text-neutral-400 text-sm">What it is, why to learn it, and the key concepts. You get the essentials without having to read everything.</p>
+</div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+<div class="w-12 h-12 rounded-full bg-primary/20 text-primary font-bold text-xl flex items-center justify-center mb-4">2</div>
+<h3 class="text-lg font-semibold mb-2">Modal or full page</h3>
+<p class="text-neutral-400 text-sm">Each module opens in a modal for quick reading or in a dedicated page with practical cases and code.</p>
+</div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+<div class="w-12 h-12 rounded-full bg-primary/20 text-primary font-bold text-xl flex items-center justify-center mb-4">3</div>
+<h3 class="text-lg font-semibold mb-2">Light and dark mode</h3>
+<p class="text-neutral-400 text-sm">Read at night in the dark, read during the day in the light. Everything optimized for long reading.</p>
+</div>
+</div>
+</section>
+FOOTER
+<footer class="border-t border-dark-600 py-8 mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+<p>Agentejax · MIT License · 2026</p>
+<p class="mt-1"><a class="text-sky-400 hover:text-sky-300" href="https://duclub" target="_blank">duclub</a></p>
+</div>
+</footer>
+SCRIPTS
+<script data-notranslate="True">
     // ============== THEME TOGGLE ==============
     const themeToggle = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
@@ -629,6 +612,5 @@
     features.forEach(f => { if (f.recommended) f.selected = true; });
     render();
   </script>
-
 </body>
 </html>
